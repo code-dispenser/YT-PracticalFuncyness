@@ -10,6 +10,10 @@ internal class Program
         
         await Map_Tap_For_Chaining.Run();
 
+        await SelectMany_Is_Similar_To_Bind.Run();
+
+        await Bind_For_Chaining_Monads.Run();
+        
         Console.ReadLine();
     }
 }
