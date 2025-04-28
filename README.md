@@ -6,7 +6,9 @@ This repository contains the solution from my YouTube video regarding the functi
 
 YouTube video (Map & Tap): https://youtu.be/q32AdQTIBCw
 
-YouTube vidoe (Bind): https://youtu.be/5WC-ITWMTC0
+YouTube video (Bind): https://youtu.be/5WC-ITWMTC0
+
+YouTube video (Match + Result type monad): TBA 
 
 Coffees welcomed : https://ko-fi.com/codedispenser
 
