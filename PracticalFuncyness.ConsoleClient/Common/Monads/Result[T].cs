@@ -34,7 +34,7 @@ internal class Result<T>
 
         => IsSuccess ? do_onSuccess(SuccessValue!) : new Result<TOut>(FailureValue);// Or just FailureValue as we have an implicit operator for it
     
-    public Result<T> Bind(Func<FailureBase, Result<T>> do_onFailure)
+    public Result<T> BindFailure(Func<FailureBase, Result<T>> do_onFailure)//Changed name to avoid potential resolution conflicts
 
         => IsSuccess ? new Result<T>(SuccessValue!) : do_onFailure(FailureValue);
 

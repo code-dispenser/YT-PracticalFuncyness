@@ -8,7 +8,7 @@ internal static class ResultExtensions
 
     public static Result<T> OnFailure<T>(this Result<T> thisResult, Func<FailureBase, Result<T>> do_onFailure)
 
-        => thisResult.Bind(do_onFailure);
+        => thisResult.BindFailure(do_onFailure);
 
     public static Result<T> OnFailure<T>(this Result<T> thisResult, Action<FailureBase> act_onFailure)//This is our Tap from the previous video
     {
