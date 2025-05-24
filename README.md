@@ -10,5 +10,8 @@ YouTube video (Bind): https://youtu.be/5WC-ITWMTC0
 
 YouTube video (Match + Result type monad): https://youtu.be/tRiz3c5-HKM 
 
+
+YouTube video (Currying & Partial Application): https://youtu.be/MNCXFd35Aas
+
 Coffees welcomed : https://ko-fi.com/codedispenser
 
