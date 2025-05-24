@@ -7,7 +7,7 @@ internal class Program
     static async Task Main()
     {
         await Select_Is_Map.Run();
-        
+
         await Map_Tap_For_Chaining.Run();
 
         await SelectMany_Is_Similar_To_Bind.Run();
@@ -17,6 +17,10 @@ internal class Program
         await Match_To_Get_At_Private_Data.Run();
 
         await Using_The_Return_Type.Run();
+
+        await Mild_Curry_ing.Run();
+
+        await Partial_Application.Run();
 
         Console.ReadLine();
     }

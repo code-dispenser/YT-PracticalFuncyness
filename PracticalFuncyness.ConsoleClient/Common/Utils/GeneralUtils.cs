@@ -8,9 +8,4 @@ internal static class GeneralUtils
 
         => new String('=', headingText.Length + 2).Map(x => $"{x}\r\n{headingText}\r\n{x}\r\n");
     
-
-    public static string GetString(this object? obj, string defaultValue)
-    {
-        return obj?.ToString() ?? defaultValue;
-    }
 }
