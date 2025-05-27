@@ -22,6 +22,10 @@ internal class Program
 
         await Partial_Application.Run();
 
+        await Memoization_Overlapping_SubProblems.Run();
+
+        await Memoization_General.Run();
+
         Console.ReadLine();
     }
 }
