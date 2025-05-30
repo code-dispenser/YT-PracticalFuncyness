@@ -78,4 +78,18 @@ internal static class FunctionalExtensions
     #endregion
 
     #endregion
+
+    #region AndThen extension + Componse util
+
+    public static Func<TIn,TOut> AndThen<TIn,TMid, TOut>(this Func<TIn,TMid> thisFunc, Func<TMid, TOut> nextFunc)
+        
+       => inputVal => nextFunc(thisFunc(inputVal));
+
+    public static Func<TIn, TOut> Compose<TIn, TOut>(Func<TIn, TOut> thisFunc)
+
+        => thisFunc;
+
+    #endregion
+
+
 }

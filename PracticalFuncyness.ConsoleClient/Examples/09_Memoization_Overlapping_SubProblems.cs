@@ -47,7 +47,7 @@ internal class Memoization_Overlapping_SubProblems
 
         stopwatch.Stop();
 
-        Console.WriteLine($"memoizedFibonacci(200)\t = {memoizedFibonacciResult:N0} in {stopwatch.ElapsedMilliseconds}ms");
+        Console.WriteLine($"memoizedFibonacci(200)\t = {memoizedFibonacciResult:N0} in {stopwatch.ElapsedMilliseconds}ms\r\n");
         /*
             * Now go ask ChatGpt how long a standard pc would take to calculate fibonacci(200) without memoization - there are better, but our util is versatile!. 
         */

@@ -76,3 +76,29 @@ public enum WeatherCode
     ThunderstormWithSlightHail  = 96,
     ThunderstormWithHeavyHail   = 99
 }
+
+public enum AgeBand :int
+{
+    Child    = 0,
+    Teenager = 1,
+    Adult    = 2,
+    Senior   = 3
+}
+
+public class Age(int value)
+{
+    public int Value { get; } = (value > 0 && value < 123) ? value : throw new ArgumentOutOfRangeException(nameof(value), "Age must be a positive integer less than 123.");
+}
+public class Name(string value)
+{
+    public string Value { get; } = (!string.IsNullOrWhiteSpace(value) && value.Length > 0 && value.Length < 50) ? value : throw new ArgumentException("Name cannot be null or empty and must be between 1 and 50 characters", nameof(value));
+}
+
+public class DateOfBirth(DateOnly value)
+{
+    public DateOnly Value { get; } = (value <= DateOnly.FromDateTime(DateTime.Today)) ? value : throw new ArgumentOutOfRangeException(nameof(value), "Date of birth cannot be in the future.");
+}
+
+public record Person(Name FirstName, Name Surname, DateOfBirth DateOfBirth);
+
+

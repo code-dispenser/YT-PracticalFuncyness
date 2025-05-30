@@ -26,6 +26,8 @@ internal class Program
 
         await Memoization_General.Run();
 
+        await AndThen_For_Function_Composition.Run();
+
         Console.ReadLine();
     }
 }

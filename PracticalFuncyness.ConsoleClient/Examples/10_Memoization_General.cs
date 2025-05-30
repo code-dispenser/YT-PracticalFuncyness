@@ -38,7 +38,7 @@ internal class Memoization_General
 
         stopwatch.Stop();
 
-        Console.WriteLine($"London:\t\t {londonWeather}\r\nParis:\t\t {parisWeather}\r\nNew York:\t {newYorkWeather}\r\n\r\n603 memoized function calls, 3 of which across the internet to the free weather API took: {stopwatch.ElapsedMilliseconds}ms");
+        Console.WriteLine($"London:\t\t {londonWeather}\r\nParis:\t\t {parisWeather}\r\nNew York:\t {newYorkWeather}\r\n\r\n603 memoized function calls, 3 of which across the internet to the free weather API took: {stopwatch.ElapsedMilliseconds}ms\r\n");
     }
 
     public static async Task<string> GetCurrentWeather(HttpClient httpClient, string weatherUrl)
