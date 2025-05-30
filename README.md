@@ -14,5 +14,7 @@ YouTube video (Currying & Partial Application): https://youtu.be/MNCXFd35Aas
 
 YouTube video (Memoization): https://youtu.be/z76yZrVPDrs
 
+YouTube video (Function Composition): https://youtu.be/70ks9gM-hMg
+
 Coffees welcomed : https://ko-fi.com/codedispenser
 
