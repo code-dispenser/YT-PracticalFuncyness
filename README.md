@@ -16,5 +16,7 @@ YouTube video (Memoization): https://youtu.be/z76yZrVPDrs
 
 YouTube video (Function Composition): https://youtu.be/70ks9gM-hMg
 
+YouTube video (Option type monad): https://youtu.be/ClA7bdmz3G4
+
 Coffees welcomed : https://ko-fi.com/codedispenser
 
