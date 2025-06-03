@@ -1,4 +1,6 @@
-﻿namespace PracticalFuncyness.ConsoleClient.Common.Models;
+﻿using PracticalFuncyness.ConsoleClient.Common.Monads;
+
+namespace PracticalFuncyness.ConsoleClient.Common.Models;
 
 internal record class RegistrationEmail(string FirstName, string EmailAddress);
 internal class Registration
@@ -102,3 +104,10 @@ public class DateOfBirth(DateOnly value)
 public record Person(Name FirstName, Name Surname, DateOfBirth DateOfBirth);
 
 
+public enum DisplayMode : int { Dark = 1, Light = 2, HighContrast = 3 }
+
+public record ThemeSettings(DisplayMode DisplayMode, Option<string> AccentColor);
+
+public record ContactMethods(Option<string> Email, Option<string> Phone);
+
+public record UserPreferences(string Language,Option<string> TimeZone, Option<int> FontSize, Option<ThemeSettings> Theme, Option<ContactMethods> ContactMethods);
