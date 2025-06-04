@@ -30,11 +30,11 @@ public static class OptionExtensions
 
         List<T> list = [];
 
-        foreach (var potential in options)
+        foreach (var option in options)
         {
-            if (potential.IsNone) return Option<IEnumerable<T>>.None();
+            if (option.IsNone) return Option<IEnumerable<T>>.None();
 
-            list.Add(potential.Match(onNone: () => default!, onSome: value => value));
+            list.Add(option.Match(onNone: () => default!, onSome: value => value));
 
         }
 
