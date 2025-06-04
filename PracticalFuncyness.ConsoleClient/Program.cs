@@ -29,7 +29,9 @@ internal class Program
         await AndThen_For_Function_Composition.Run();
 
         await Using_The_Option_Type.Run();
-        
+
+        await Option_Sequence_And_Traverse.Run();
+
         Console.ReadLine();
     }
 }

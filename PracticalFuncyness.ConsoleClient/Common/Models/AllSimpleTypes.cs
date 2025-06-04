@@ -111,3 +111,6 @@ public record ThemeSettings(DisplayMode DisplayMode, Option<string> AccentColor)
 public record ContactMethods(Option<string> Email, Option<string> Phone);
 
 public record UserPreferences(string Language,Option<string> TimeZone, Option<int> FontSize, Option<ThemeSettings> Theme, Option<ContactMethods> ContactMethods);
+
+
+

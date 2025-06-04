@@ -1,5 +1,4 @@
 ﻿using PracticalFuncyness.ConsoleClient.Common.Monads;
-using System.Text.Json.Nodes;
 
 namespace PracticalFuncyness.ConsoleClient.Common.Extensions;
 
@@ -34,7 +33,7 @@ public static class OptionExtensions
         {
             if (option.IsNone) return Option<IEnumerable<T>>.None();
 
-            list.Add(option.Match(onNone: () => default!, onSome: value => value));
+            list.Add(option.GetValueOr(default!));
 
         }
 
@@ -53,7 +52,7 @@ public static class OptionExtensions
 
             if (newOption.IsNone) return Option<IEnumerable<TOut>>.None();
 
-            transformerResults.Add(newOption.Match(onNone: () => default!, onSome: value => value));
+            transformerResults.Add(newOption.GetValueOr(default!));
         }
 
         return Option<IEnumerable<TOut>>.Some(transformerResults);
