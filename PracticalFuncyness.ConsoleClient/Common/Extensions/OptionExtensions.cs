@@ -41,23 +41,21 @@ public static class OptionExtensions
         return Option<IEnumerable<T>>.Some(list);
     }
 
-    public static Option<IEnumerable<TOut>> Traverse<TIn, TOut>(this IEnumerable<Option<TIn>> options, Func<TIn, Option<TOut>> onSome) where TIn : notnull where TOut : notnull
+    public static Option<IEnumerable<TOut>> Traverse<TIn, TOut>(this IEnumerable<TIn> source, Func<TIn, Option<TOut>> transformer) where TIn : notnull where TOut : notnull
     {
-        if (options is null) throw new ArgumentNullException(nameof(options));
+        if (source is null) throw new ArgumentNullException(nameof(source));
 
-        List<TOut> list = [];
+        List<TOut> transformerResults = [];
 
-        foreach (var option in options)
+        foreach (var item in source)
         {
-            if (option.IsNone) return Option<IEnumerable<TOut>>.None();
-
-            var newOption = option.Match(onNone: () => default!, onSome: value => onSome(value));
+            var newOption = transformer(item);
 
             if (newOption.IsNone) return Option<IEnumerable<TOut>>.None();
 
-            list.Add(newOption.Match(onNone: () => default!, onSome: value => value));
+            transformerResults.Add(newOption.Match(onNone: () => default!, onSome: value => value));
         }
 
-        return Option<IEnumerable<TOut>>.Some(list);
+        return Option<IEnumerable<TOut>>.Some(transformerResults);
     }
 }
