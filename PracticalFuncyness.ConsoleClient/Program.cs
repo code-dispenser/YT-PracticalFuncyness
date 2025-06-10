@@ -32,6 +32,8 @@ internal class Program
 
         await Option_Sequence_And_Traverse.Run();
 
+        await Validated_Using_Combine.Run();
+
         Console.ReadLine();
     }
 }

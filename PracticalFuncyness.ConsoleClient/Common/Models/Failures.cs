@@ -12,4 +12,8 @@ internal abstract class FailureBase
     public sealed class ApplicationFailure(string message)    : FailureBase(message) { }
     public sealed class FileProcessingFailure(string message) : FailureBase(message) { }
 
+    public sealed class ValidationFailure(IEnumerable<ValidationEntry> failures, string summary) : FailureBase(summary)
+    {
+        public IEnumerable<ValidationEntry> Failures => failures;
+    }
 }
