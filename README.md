@@ -20,5 +20,7 @@ YouTube video (Option type monad): https://youtu.be/ClA7bdmz3G4
 
 YouTube video (Sequence & Traverse on the Option type) : https://youtu.be/nND9OmBTFyo
 
+YouTube video: (Validated type): https://youtu.be/2yOZ1g_EGos
+
 Coffees welcomed : https://ko-fi.com/codedispenser
 
