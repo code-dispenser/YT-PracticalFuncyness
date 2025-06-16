@@ -1,4 +1,5 @@
 ﻿using PracticalFuncyness.ConsoleClient.Common.Monads;
+using System.ComponentModel;
 
 namespace PracticalFuncyness.ConsoleClient.Common.Models;
 

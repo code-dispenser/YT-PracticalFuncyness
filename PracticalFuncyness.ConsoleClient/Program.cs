@@ -34,6 +34,8 @@ internal class Program
 
         await Validated_Using_Combine.Run();
 
+        await Validated_Using_Classical_Apply.Run();
+
         Console.ReadLine();
     }
 }

@@ -37,5 +37,25 @@ internal static class ValidatedExtensions
     
         => validated.IsValid ? Result<T>.Success(validated.GetValueOr(default!))
                                  : Result<T>.Failed(new FailureBase.ValidationFailure(validated.Failures, "Validation failed."));
-    
+
+
+                                                                  // The TOut could be the finished value or the nested Func   
+    public static Validated<TOut> Apply<TIn, TOut>(this Validated<Func<TIn, TOut>> validatedFunc, Validated<TIn> validatedItem) where TIn : notnull where TOut : notnull
+    {
+        if (validatedFunc.IsValid && validatedItem.IsValid)
+        {
+            var func    = validatedFunc.GetValueOr(default!);
+            var value   = validatedItem.GetValueOr(default!);
+            var result  = func(value);
+           
+            return Validated<TOut>.Valid(result);
+        }
+
+        var failures = new List<ValidationEntry>();
+
+        if (validatedFunc.IsInvalid) failures.AddRange(validatedFunc.Failures);
+        if (validatedItem.IsInvalid) failures.AddRange(validatedItem.Failures);
+
+        return Validated<TOut>.Invalid(failures);
+    }
 }

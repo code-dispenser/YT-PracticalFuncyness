@@ -91,5 +91,19 @@ internal static class FunctionalExtensions
 
     #endregion
 
+    #region Curry helpers
 
+    public static Func<T1, Func<T2,TOut>> Curry<T1, T2, TOut>(Func<T1, T2, TOut> funcToCurry)
+
+        => t1 => t2 => funcToCurry(t1, t2);
+
+    public static Func<T1, Func<T2, Func<T3, TOut>>> Curry<T1, T2, T3, TOut>(Func<T1, T2, T3, TOut> funcToCurry)
+    
+        =>  t1 => t2 => t3 => funcToCurry(t1, t2, t3);
+
+    public static Func<T1, Func<T2, Func<T3, Func<T4,TOut>>>> Curry<T1, T2, T3, T4, TOut>(Func<T1, T2, T3, T4, TOut> funcToCurry)
+
+        => t1 => t2 => t3 => t4 => funcToCurry(t1, t2, t3, t4);
+
+    #endregion
 }
