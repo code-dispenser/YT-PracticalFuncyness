@@ -22,5 +22,7 @@ YouTube video (Sequence & Traverse on the Option type) : https://youtu.be/nND9Om
 
 YouTube video: (Validated type): https://youtu.be/2yOZ1g_EGos
 
+YouTube video: (Validated type part two, applicative functor): https://youtu.be/rZwkSLS8zdM
+
 Coffees welcomed : https://ko-fi.com/codedispenser
 
