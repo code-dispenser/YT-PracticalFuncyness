@@ -67,8 +67,11 @@ public static class EmailSenderExtensions
 */
 public static class PartialApplicationExtensions //This is a generic partial application method that can be used on any delegate type, create what ever overloads your like.
 {
-    public static Func<T1, Func<T2, TResult>> Partial<T1, T2, TResult>(this Func<T1, T2, TResult> func)
-    
+    public static Func<T1, Func<T2, TResult>> CurryingPartial<T1, T2, TResult>(this Func<T1, T2, TResult> func) // for currying
+
         => arg1 => arg2 => func(arg1, arg2);
-    
+
+    public static Func<T2, TResult> Partial<T1, T2, TResult>(this Func<T1, T2, TResult> func, T1 arg1) // direct partial application
+
+        => arg2 => func(arg1, arg2);
 }
