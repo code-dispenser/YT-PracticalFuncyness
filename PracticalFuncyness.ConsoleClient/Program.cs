@@ -36,6 +36,8 @@ internal class Program
 
         await Validated_Using_Classical_Apply.Run();
 
+        await Using_The_State_Monad.Run();
+
         Console.ReadLine();
     }
 }
