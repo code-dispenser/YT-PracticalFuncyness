@@ -24,5 +24,7 @@ YouTube video: (Validated type): https://youtu.be/2yOZ1g_EGos
 
 YouTube video: (Validated type part two, applicative functor): https://youtu.be/rZwkSLS8zdM
 
+YouTube video: (State Monad): https://youtu.be/QSiz20M0Oi4
+
 Coffees welcomed : https://ko-fi.com/codedispenser
 
